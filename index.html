@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="time-dashboard-container">
+      <div class="profile-container">
+        <div class="avatar-container">
+          <img
+            class="avatar-photo"
+            src="images/image-jeremy.png"
+            alt="user image"
+          />
+          <div class="avatar-text-container">
+            <p class="starting-avatar-text">Report for</p>
+            <p class="avatar-username">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="time-options-container">
+          <button class="time-button">Daily</button
+          ><button class="time-button time-button-selected">Weekly</button
+          ><button class="time-button">Monthly</button>
+        </div>
+      </div>
+
+      <div class="category-container" id="category-container-work">
+        <div class="category-wallpaper category-work"></div>
+        <div class="category-content-container">
+          <div class="category-top">
+            <p class="category-type">Work</p>
+            <div class="category-icon-container">
+              <img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+          </div>
+          <div class="category-bottom">
+            <p class="hours-spent">32hrs</p>
+            <p class="hours-last-spent-msg">
+              <span class="last-spent-type">Last Week</span> -
+              <span class="hours-last-spent">36hrs</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-container" id="category-container-play">
+        <div class="category-wallpaper category-play"></div>
+        <div class="category-content-container">
+          <div class="category-top">
+            <p class="category-type">Play</p>
+            <div class="category-icon-container">
+              <img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+          </div>
+          <div class="category-bottom">
+            <p class="hours-spent">10hrs</p>
+            <p class="hours-last-spent-msg">
+              <span class="last-spent-type">Last Week</span> -
+              <span class="hours-last-spent">8hrs</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-container" id="category-container-study">
+        <div class="category-wallpaper category-study"></div>
+        <div class="category-content-container">
+          <div class="category-top">
+            <p class="category-type">Study</p>
+            <div class="category-icon-container">
+              <img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+          </div>
+          <div class="category-bottom">
+            <p class="hours-spent">4hrs</p>
+            <p class="hours-last-spent-msg">
+              <span class="last-spent-type">Last Week</span> -
+              <span class="hours-last-spent">7hrs</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-container" id="category-container-exercise">
+        <div class="category-wallpaper category-exercise"></div>
+        <div class="category-content-container">
+          <div class="category-top">
+            <p class="category-type">Exercise</p>
+            <div class="category-icon-container">
+              <img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+          </div>
+          <div class="category-bottom">
+            <p class="hours-spent">4hrs</p>
+            <p class="hours-last-spent-msg">
+              <span class="last-spent-type">Last Week</span> -
+              <span class="hours-last-spent">5hrs</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-container" id="category-container-social">
+        <div class="category-wallpaper category-social"></div>
+        <div class="category-content-container">
+          <div class="category-top">
+            <p class="category-type">Social</p>
+            <div class="category-icon-container">
+              <img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+          </div>
+          <div class="category-bottom">
+            <p class="hours-spent">5hrs</p>
+            <p class="hours-last-spent-msg">
+              <span class="last-spent-type">Last Week</span> -
+              <span class="hours-last-spent">10hrs</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-container" id="category-container-self-care">
+        <div class="category-wallpaper category-self-care"></div>
+        <div class="category-content-container">
+          <div class="category-top">
+            <p class="category-type">Self Care</p>
+            <div class="category-icon-container">
+              <img
+                class="ellipsis"
+                src="images/icon-ellipsis.svg"
+                alt="ellipsis"
+              />
+            </div>
+          </div>
+          <div class="category-bottom">
+            <p class="hours-spent">2hrs</p>
+            <p class="hours-last-spent-msg">
+              <span class="last-spent-type">Last Week</span> - 
+              <span class="hours-last-spent">2hrs</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

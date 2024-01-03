@@ -1,0 +1,342 @@
+/*GENERAL*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-blue: hsl(246, 80%, 60%);
+  --clr-light-red-work: hsl(15, 100%, 70%);
+  --clr-soft-blue: hsl(195, 74%, 62%);
+  --clr-light-red-study: hsl(348, 100%, 68%);
+  --clr-lime-green: hsl(145, 58%, 55%);
+  --clr-violet: hsl(264, 64%, 52%);
+  --clr-soft-orange: hsl(43, 84%, 65%);
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+  --clr-white: #fff;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+}
+
+body {
+  min-height: 100svh;
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-white);
+  font-family: "Rubik";
+  padding: 5rem 2rem;
+}
+
+button {
+  font-family: "Rubik";
+}
+
+/*GENERAL CLASSES AND WRAPPERS*/
+
+.time-dashboard-container {
+  --card-padding: 2em;
+  --card-border-radius: 1.2rem;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-dark-blue);
+  border-radius: var(--card-border-radius);
+}
+
+/*PROFILE CONTAINER CLASSES*/
+
+.avatar-photo {
+  border: 4px solid var(--clr-white);
+  border-radius: 100vw;
+  aspect-ratio: 1;
+  width: 5.5em;
+  margin-right: 1em;
+}
+
+.avatar-container {
+  display: flex;
+  background-color: var(--clr-violet);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.avatar-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .6em;
+}
+
+.starting-avatar-text {
+  font-weight: var(--fw-light);
+  color: var(--clr-pale-blue);
+}
+
+.avatar-username {
+  font-weight: var(--fw-light);
+  font-size: 2rem;
+}
+
+/*TIME-OPTIONS*/
+
+.time-options-container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1em;
+  padding: var(--card-padding);
+  padding-inline: 3em;
+  gap: 2em;
+}
+
+.time-button {
+  font-size: 1.2rem;
+  font-weight: var(--fw-light);
+  border: none;
+  background-color: transparent;
+  color: var(--clr-soft-blue);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.time-button:hover {
+  transform: translateY(-3px);
+}
+
+.time-button-selected {
+  color: var(--clr-white);
+}
+
+/*GENERAL CATEGORY CLASSES*/
+
+.category-container {
+  border-radius: var(--card-border-radius);
+  margin-bottom: 5.2em;
+}
+
+.category-wallpaper {
+  height: 60%;
+  background-repeat: no-repeat;
+  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  overflow: hidden; 
+  background-size: 7.5em;
+  background-position: calc(100% - 2em) calc(0% - .4em); 
+}
+
+/*SPECIFIC CATEGORY CLASSES*/
+
+.category-work {
+  background-image: url(images/icon-work.svg);
+  background-color: var(--clr-light-red-work);
+  background-position: calc(100% - 2em) calc(0% - .8em); 
+}
+
+.category-play {
+  background-image: url(images/icon-play.svg);
+  background-color: var(--clr-soft-blue);
+}
+
+.category-study {
+  background-image: url(images/icon-study.svg);
+  background-color: var(--clr-light-red-study);
+}
+
+.category-exercise {
+  background-image: url(images/icon-exercise.svg);
+  background-size: 8em;
+  background-color: var(--clr-lime-green);
+  background-position: calc(100% - 2em) calc(0% + .1em); 
+}
+
+.category-social {
+  background-image: url(images/icon-social.svg);
+  background-color: var(--clr-violet);
+  background-position: calc(100% - 2em) calc(0% - 1.5em); 
+}
+
+.category-self-care {
+  background-image: url(images/icon-self-care.svg);
+  background-color: var(--clr-soft-orange);
+  background-position: calc(100% - 2em) calc(0% - 1.2em);
+  background-size: 7em; 
+}
+
+/*CATEGORY CONTENT*/
+
+.category-content-container {
+  background-color: var(--clr-dark-blue);
+  padding: var(--card-padding);
+  margin-top: -1.25em;
+  border-radius: var(--card-border-radius);
+  transition: background-color .25s ease-out;
+}
+
+.category-content-container:hover {
+  background-color: var(--clr-blue);
+}
+
+.category-top, .category-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-top {
+  margin-bottom: 1rem;
+}
+
+.category-type {
+  font-size: 1.5rem;
+}
+
+.ellipsis {
+  width: 1.7rem;
+  cursor: pointer;
+}
+
+.hours-spent {
+  font-weight: var(--fw-light);
+  font-size: 2.5rem;
+}
+
+.hours-last-spent-msg {
+  font-size: 1.2rem;
+  color: var(--clr-soft-blue);
+}
+
+@media (min-width: 1440px) {
+  /*CENTERING ENTIRE GRID*/
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  /*DESKTOP LAYOUT*/
+  .time-dashboard-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "profile work play study"
+    "profile exercise social self-care";
+  }
+
+  .profile-container {
+    grid-area: profile;
+  }
+
+  #category-container-work {
+    grid-area: work;
+  }
+
+  #category-container-play {
+    grid-area: play;
+  }
+
+  #category-container-study {
+    grid-area: study;
+  }
+
+  #category-container-exercise {
+    grid-area: exercise;
+  }
+
+  #category-container-social {
+    grid-area: social;
+  }
+
+  #category-container-self-care {
+    grid-area: self-care;
+  }
+
+  /*EDITING ICONS*/
+  .category-wallpaper {
+    background-size: 6em;
+    background-position: calc(100% - 2em) calc(0% - .1em);
+    height: 45%; 
+  }
+
+  .category-work {
+    background-position: calc(100% - 2em) calc(0% - .4em); 
+  }
+
+  .category-exercise {
+    background-position: calc(100% - 2em) calc(0% + .1em); 
+    background-size: 6.5em;
+  }
+
+  .category-social {
+    background-position: calc(100% - 2em) calc(0% + .2em); 
+  }
+
+  .category-self-care {
+    background-position: calc(100% - 2em) calc(0% - .8em);
+    background-size: 5.5em;
+  }
+
+  /*CHANGE CONTENT*/
+  .category-content-container {
+    margin-top: -1.5em;
+    padding-bottom: 2.2em;
+  }
+
+  .category-bottom {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+  }
+
+  .category-type{
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+  }
+
+  .hours-spent {
+    font-size: 3.5rem;
+  }
+
+  .hours-last-spent-msg {
+    font-size: 1rem;
+  }
+
+  /*AVATAR PROFILE*/
+  .avatar-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: .6em;
+    padding-bottom: 1rem;
+  }
+
+  .avatar-photo {
+    margin-bottom: 2rem;
+    width: 7rem;
+  }
+
+  .avatar-username {
+    font-size: 3rem;
+    max-width: 8ch;
+    padding-bottom: 4rem;
+  }
+
+  .time-options-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    padding: 2em;
+  }
+
+  .starting-avatar-text {
+    font-weight: var(--fw-regular);
+  }
+}
